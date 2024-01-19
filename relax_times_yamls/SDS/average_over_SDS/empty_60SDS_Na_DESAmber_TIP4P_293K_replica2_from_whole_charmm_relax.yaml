@@ -1,0 +1,456 @@
+analysis0:
+  info:
+    00_nuclei: 2H
+    01_magnetic_field_[T]: 2.35
+    02_magnetic_field_[MHz]: 100.05
+    03_N_exp_to_fit: 500
+    04_smallest_corr_time_[s]: 1.0e-15
+    05_biggest_corr_time_[s]: 1.0e-06
+    06_analyze: 0.1
+    07_OP: 0
+    08_corr_func_length_[ps]: 839300.0
+    09_saving_frequency_[ps]: 10.0
+    10_xtc: non-Water_empty_60SDS_Na_DESAmber_TIP4P_293K_replica2_from_whole_charmm.xtc
+    11_xtc_modified: '2023-04-26 16:47:52'
+    12_naame: empty_60SDS_Na_DESAmber_TIP4P_293K_replica2_from_whole_charmm
+  results:
+    0:
+      T1: 0.015136865728233515
+      T2: 0.012044805257553824
+      hetNOE: 0.0
+      res: C1_H1
+    1:
+      T1: 0.006932186639244765
+      T2: 0.004754524567266327
+      hetNOE: 0.0
+      res: C2_H24
+    2:
+      T1: 0.0056365021126588265
+      T2: 0.003783804086014803
+      hetNOE: 0.0
+      res: C3_H22
+    3:
+      T1: 0.004998825852601594
+      T2: 0.003273384089067746
+      hetNOE: 0.0
+      res: C4_H20
+    4:
+      T1: 0.0047055475370739635
+      T2: 0.003321965370852207
+      hetNOE: 0.0
+      res: C5_H18
+    5:
+      T1: 0.004584208117324683
+      T2: 0.002973616549820342
+      hetNOE: 0.0
+      res: C6_H16
+    6:
+      T1: 0.004572316065140653
+      T2: 0.0031503399973982424
+      hetNOE: 0.0
+      res: C7_H14
+    7:
+      T1: 0.004672229595811475
+      T2: 0.003378853826984836
+      hetNOE: 0.0
+      res: C8_H12
+    8:
+      T1: 0.004878743483140874
+      T2: 0.0032601338600242924
+      hetNOE: 0.0
+      res: C9_H10
+    9:
+      T1: 0.005377589019762101
+      T2: 0.003821454968575127
+      hetNOE: 0.0
+      res: C10_H8
+    10:
+      T1: 0.0064552755031593865
+      T2: 0.004129526835377213
+      hetNOE: 0.0
+      res: C11_H6
+    11:
+      T1: 0.05468369771217411
+      T2: 0.03977633232555695
+      hetNOE: 0.0
+      res: C12_H4
+analysis1:
+  info:
+    00_nuclei: 2H
+    01_magnetic_field_[T]: 5.99
+    02_magnetic_field_[MHz]: 255.03
+    03_N_exp_to_fit: 500
+    04_smallest_corr_time_[s]: 1.0e-15
+    05_biggest_corr_time_[s]: 1.0e-06
+    06_analyze: 0.1
+    07_OP: 0
+    08_corr_func_length_[ps]: 839300.0
+    09_saving_frequency_[ps]: 10.0
+    10_xtc: non-Water_empty_60SDS_Na_DESAmber_TIP4P_293K_replica2_from_whole_charmm.xtc
+    11_xtc_modified: '2023-04-26 16:47:52'
+    12_naame: empty_60SDS_Na_DESAmber_TIP4P_293K_replica2_from_whole_charmm
+  results:
+    0:
+      T1: 0.02548253764405017
+      T2: 0.015865329023419174
+      hetNOE: 0.0
+      res: C1_H1
+    1:
+      T1: 0.015273626906353008
+      T2: 0.006633810122853947
+      hetNOE: 0.0
+      res: C2_H24
+    2:
+      T1: 0.012935128323813773
+      T2: 0.0052819672000079575
+      hetNOE: 0.0
+      res: C3_H22
+    3:
+      T1: 0.011645251928204264
+      T2: 0.004530352569235908
+      hetNOE: 0.0
+      res: C4_H20
+    4:
+      T1: 0.010968098954162278
+      T2: 0.004743721754195154
+      hetNOE: 0.0
+      res: C5_H18
+    5:
+      T1: 0.010682084605797296
+      T2: 0.004104900305771733
+      hetNOE: 0.0
+      res: C6_H16
+    6:
+      T1: 0.010664692285216363
+      T2: 0.00446245901797256
+      hetNOE: 0.0
+      res: C7_H14
+    7:
+      T1: 0.010940285683929823
+      T2: 0.004890601376911348
+      hetNOE: 0.0
+      res: C8_H12
+    8:
+      T1: 0.011530299499575633
+      T2: 0.004576070427806312
+      hetNOE: 0.0
+      res: C9_H10
+    9:
+      T1: 0.012808650678836927
+      T2: 0.005522686943550071
+      hetNOE: 0.0
+      res: C10_H8
+    10:
+      T1: 0.015577835993657987
+      T2: 0.005750607169487484
+      hetNOE: 0.0
+      res: C11_H6
+    11:
+      T1: 0.1117678760952419
+      T2: 0.05519158605982521
+      hetNOE: 0.0
+      res: C12_H4
+analysis2:
+  info:
+    00_nuclei: 2H
+    01_magnetic_field_[T]: 8.49
+    02_magnetic_field_[MHz]: 361.47
+    03_N_exp_to_fit: 500
+    04_smallest_corr_time_[s]: 1.0e-15
+    05_biggest_corr_time_[s]: 1.0e-06
+    06_analyze: 0.1
+    07_OP: 0
+    08_corr_func_length_[ps]: 839300.0
+    09_saving_frequency_[ps]: 10.0
+    10_xtc: non-Water_empty_60SDS_Na_DESAmber_TIP4P_293K_replica2_from_whole_charmm.xtc
+    11_xtc_modified: '2023-04-26 16:47:52'
+    12_naame: empty_60SDS_Na_DESAmber_TIP4P_293K_replica2_from_whole_charmm
+  results:
+    0:
+      T1: 0.030173322134289235
+      T2: 0.01759422834560516
+      hetNOE: 0.0
+      res: C1_H1
+    1:
+      T1: 0.020953025911414798
+      T2: 0.007534279960032302
+      hetNOE: 0.0
+      res: C2_H24
+    2:
+      T1: 0.018268132784409113
+      T2: 0.006012883999900209
+      hetNOE: 0.0
+      res: C3_H22
+    3:
+      T1: 0.01660395660656206
+      T2: 0.005144490706030097
+      hetNOE: 0.0
+      res: C4_H20
+    4:
+      T1: 0.015731297644987544
+      T2: 0.005471247494146924
+      hetNOE: 0.0
+      res: C5_H18
+    5:
+      T1: 0.01535747325803903
+      T2: 0.004654713697079357
+      hetNOE: 0.0
+      res: C6_H16
+    6:
+      T1: 0.015348199097709295
+      T2: 0.005121053012815614
+      hetNOE: 0.0
+      res: C7_H14
+    7:
+      T1: 0.015773206470664408
+      T2: 0.005676082737359013
+      hetNOE: 0.0
+      res: C8_H12
+    8:
+      T1: 0.016655223673735627
+      T2: 0.005227724966229293
+      hetNOE: 0.0
+      res: C9_H10
+    9:
+      T1: 0.018575065665910485
+      T2: 0.006399811610908047
+      hetNOE: 0.0
+      res: C10_H8
+    10:
+      T1: 0.022662887417031086
+      T2: 0.006529692545687497
+      hetNOE: 0.0
+      res: C11_H6
+    11:
+      T1: 0.14520679711923848
+      T2: 0.0625697691976827
+      hetNOE: 0.0
+      res: C12_H4
+analysis3:
+  info:
+    00_nuclei: 2H
+    01_magnetic_field_[T]: 2.35
+    02_magnetic_field_[MHz]: 100.05
+    03_N_exp_to_fit: 100
+    04_smallest_corr_time_[s]: 1.0e-11
+    05_biggest_corr_time_[s]: 1.0e-07
+    06_analyze: 0.1
+    07_OP: 0
+    08_corr_func_length_[ps]: 839300.0
+    09_saving_frequency_[ps]: 10.0
+    10_xtc: non-Water_empty_60SDS_Na_DESAmber_TIP4P_293K_replica2_from_whole_charmm.xtc
+    11_xtc_modified: '2023-04-26 16:47:52'
+    12_naame: empty_60SDS_Na_DESAmber_TIP4P_293K_replica2_from_whole_charmm
+  results:
+    0:
+      T1: 0.015087797173143756
+      T2: 0.012014565918308238
+      hetNOE: 0.0
+      res: C1_H1
+    1:
+      T1: 0.006919916773050481
+      T2: 0.005046792661924131
+      hetNOE: 0.0
+      res: C2_H24
+    2:
+      T1: 0.00562704331832743
+      T2: 0.00408924383344972
+      hetNOE: 0.0
+      res: C3_H22
+    3:
+      T1: 0.004988777326330395
+      T2: 0.003621987789728872
+      hetNOE: 0.0
+      res: C4_H20
+    4:
+      T1: 0.004696149389209846
+      T2: 0.0034161021625077844
+      hetNOE: 0.0
+      res: C5_H18
+    5:
+      T1: 0.004577986646106685
+      T2: 0.00330915359019824
+      hetNOE: 0.0
+      res: C6_H16
+    6:
+      T1: 0.0045654183137935735
+      T2: 0.0033039729885225443
+      hetNOE: 0.0
+      res: C7_H14
+    7:
+      T1: 0.004663561196105829
+      T2: 0.0033727876576130564
+      hetNOE: 0.0
+      res: C8_H12
+    8:
+      T1: 0.004866808206737852
+      T2: 0.0035222401327937606
+      hetNOE: 0.0
+      res: C9_H10
+    9:
+      T1: 0.0053611714983182145
+      T2: 0.0038379680411152186
+      hetNOE: 0.0
+      res: C10_H8
+    10:
+      T1: 0.006430289530462737
+      T2: 0.004588941224504634
+      hetNOE: 0.0
+      res: C11_H6
+    11:
+      T1: 0.05213826568657858
+      T2: 0.039548156947962834
+      hetNOE: 0.0
+      res: C12_H4
+analysis4:
+  info:
+    00_nuclei: 2H
+    01_magnetic_field_[T]: 5.99
+    02_magnetic_field_[MHz]: 255.03
+    03_N_exp_to_fit: 100
+    04_smallest_corr_time_[s]: 1.0e-11
+    05_biggest_corr_time_[s]: 1.0e-07
+    06_analyze: 0.1
+    07_OP: 0
+    08_corr_func_length_[ps]: 839300.0
+    09_saving_frequency_[ps]: 10.0
+    10_xtc: non-Water_empty_60SDS_Na_DESAmber_TIP4P_293K_replica2_from_whole_charmm.xtc
+    11_xtc_modified: '2023-04-26 16:47:52'
+    12_naame: empty_60SDS_Na_DESAmber_TIP4P_293K_replica2_from_whole_charmm
+  results:
+    0:
+      T1: 0.025355736964132285
+      T2: 0.015812216942985662
+      hetNOE: 0.0
+      res: C1_H1
+    1:
+      T1: 0.015230197917259396
+      T2: 0.007213368793827099
+      hetNOE: 0.0
+      res: C2_H24
+    2:
+      T1: 0.012870992648431867
+      T2: 0.005894842228542302
+      hetNOE: 0.0
+      res: C3_H22
+    3:
+      T1: 0.011591598194763419
+      T2: 0.005222833630152458
+      hetNOE: 0.0
+      res: C4_H20
+    4:
+      T1: 0.010922749270489297
+      T2: 0.00493497048852698
+      hetNOE: 0.0
+      res: C5_H18
+    5:
+      T1: 0.010641900350716339
+      T2: 0.0047687848531901
+      hetNOE: 0.0
+      res: C6_H16
+    6:
+      T1: 0.01062754329486761
+      T2: 0.004774489574031543
+      hetNOE: 0.0
+      res: C7_H14
+    7:
+      T1: 0.01089071013990742
+      T2: 0.004878759664110859
+      hetNOE: 0.0
+      res: C8_H12
+    8:
+      T1: 0.011462438876044834
+      T2: 0.005106762077855471
+      hetNOE: 0.0
+      res: C9_H10
+    9:
+      T1: 0.012715236844041534
+      T2: 0.005555202047947973
+      hetNOE: 0.0
+      res: C10_H8
+    10:
+      T1: 0.015396920063084858
+      T2: 0.006673896179202321
+      hetNOE: 0.0
+      res: C11_H6
+    11:
+      T1: 0.09964554401225569
+      T2: 0.05450185228071317
+      hetNOE: 0.0
+      res: C12_H4
+analysis5:
+  info:
+    00_nuclei: 2H
+    01_magnetic_field_[T]: 8.49
+    02_magnetic_field_[MHz]: 361.47
+    03_N_exp_to_fit: 100
+    04_smallest_corr_time_[s]: 1.0e-11
+    05_biggest_corr_time_[s]: 1.0e-07
+    06_analyze: 0.1
+    07_OP: 0
+    08_corr_func_length_[ps]: 839300.0
+    09_saving_frequency_[ps]: 10.0
+    10_xtc: non-Water_empty_60SDS_Na_DESAmber_TIP4P_293K_replica2_from_whole_charmm.xtc
+    11_xtc_modified: '2023-04-26 16:47:52'
+    12_naame: empty_60SDS_Na_DESAmber_TIP4P_293K_replica2_from_whole_charmm
+  results:
+    0:
+      T1: 0.030006754025885426
+      T2: 0.017531179981860785
+      hetNOE: 0.0
+      res: C1_H1
+    1:
+      T1: 0.02087478886309779
+      T2: 0.008293081572467402
+      hetNOE: 0.0
+      res: C2_H24
+    2:
+      T1: 0.01814362629235354
+      T2: 0.006819204473633857
+      hetNOE: 0.0
+      res: C3_H22
+    3:
+      T1: 0.016498436392114183
+      T2: 0.006057247239668144
+      hetNOE: 0.0
+      res: C4_H20
+    4:
+      T1: 0.01563815839674397
+      T2: 0.005728383113595876
+      hetNOE: 0.0
+      res: C5_H18
+    5:
+      T1: 0.015278878734534904
+      T2: 0.005527651973034466
+      hetNOE: 0.0
+      res: C6_H16
+    6:
+      T1: 0.015267726919174331
+      T2: 0.005536791341474752
+      hetNOE: 0.0
+      res: C7_H14
+    7:
+      T1: 0.01566625280245262
+      T2: 0.005659648088888997
+      hetNOE: 0.0
+      res: C8_H12
+    8:
+      T1: 0.016508714398453715
+      T2: 0.005932424935974604
+      hetNOE: 0.0
+      res: C9_H10
+    9:
+      T1: 0.018367329151879136
+      T2: 0.0064437837662488845
+      hetNOE: 0.0
+      res: C10_H8
+    10:
+      T1: 0.02231599542500583
+      T2: 0.007745980417111899
+      hetNOE: 0.0
+      res: C11_H6
+    11:
+      T1: 0.1264613299016628
+      T2: 0.061539065475885425
+      hetNOE: 0.0
+      res: C12_H4

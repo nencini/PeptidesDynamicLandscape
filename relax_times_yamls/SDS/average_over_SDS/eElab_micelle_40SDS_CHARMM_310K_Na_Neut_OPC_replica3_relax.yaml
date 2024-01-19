@@ -1,0 +1,76 @@
+analysis0:
+  info:
+    00_nuclei: 2H
+    01_magnetic_field_[T]: 19.964291496497925
+    02_magnetic_field_[MHz]: 850.0
+    03_N_exp_to_fit: 200
+    04_smallest_corr_time_[s]: 1.0e-14
+    05_biggest_corr_time_[s]: 1.0e-08
+    06_analyze: 0.1
+    07_OP: 0
+    08_corr_func_length_[ps]: 1500000.0
+    09_saving_frequency_[ps]: 10.0
+    10_xtc: non-Water_eElab_micelle_40SDS_CHARMM_310K_Na_Neut_OPC_replica3.xtc
+    11_xtc_modified: '2023-01-23 20:52:01'
+    12_naame: eElab_micelle_40SDS_CHARMM_310K_Na_Neut_OPC_replica3
+  results:
+    0:
+      T1: 0.07003285420396625
+      T2: 0.03653350522679613
+      hetNOE: 0.0
+      res: C1_H11
+    1:
+      T1: 0.0651126387812189
+      T2: 0.036935283296882934
+      hetNOE: 0.0
+      res: C2_H21
+    2:
+      T1: 0.0642332731177717
+      T2: 0.0396489729697105
+      hetNOE: 0.0
+      res: C3_H31
+    3:
+      T1: 0.05912828088979016
+      T2: 0.03602390521066331
+      hetNOE: 0.0
+      res: C4_H41
+    4:
+      T1: 0.05772877617878827
+      T2: 0.036372772024828276
+      hetNOE: 0.0
+      res: C5_H51
+    5:
+      T1: 0.057031348646520284
+      T2: 0.03610841804161455
+      hetNOE: 0.0
+      res: C6_H61
+    6:
+      T1: 0.06030635106612474
+      T2: 0.0396606976302109
+      hetNOE: 0.0
+      res: C7_H71
+    7:
+      T1: 0.06700042400727675
+      T2: 0.04474899447641618
+      hetNOE: 0.0
+      res: C8_H81
+    8:
+      T1: 0.078697745618811
+      T2: 0.05540259736321974
+      hetNOE: 0.0
+      res: C9_H91
+    9:
+      T1: 0.1073121673168757
+      T2: 0.07743165881161623
+      hetNOE: 0.0
+      res: C10_H101
+    10:
+      T1: 0.1523816507585921
+      T2: 0.11824945344424717
+      hetNOE: 0.0
+      res: C11_H111
+    11:
+      T1: 0.5032175785947497
+      T2: 0.463127005882124
+      hetNOE: 0.0
+      res: C12_H121

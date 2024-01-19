@@ -1,0 +1,152 @@
+analysis0:
+  info:
+    00_nuclei: 2H
+    01_magnetic_field_[T]: 2.35
+    02_magnetic_field_[MHz]: 100.05
+    03_N_exp_to_fit: 500
+    04_smallest_corr_time_[s]: 1.0e-15
+    05_biggest_corr_time_[s]: 1.0e-06
+    06_analyze: 0.1
+    07_OP: 0
+    08_corr_func_length_[ps]: 1483000.0
+    09_saving_frequency_[ps]: 10.0
+    10_xtc: non-Water_hMff_micelle_40SDS_CHARMM_310K_Na_Neut_OPC_replica1.xtc
+    11_xtc_modified: '2023-02-27 09:51:54'
+    12_naame: hMff_micelle_40SDS_CHARMM_310K_Na_Neut_OPC_replica1
+  results:
+    0:
+      T1: 0.019236672610434918
+      T2: 0.016340365794116175
+      hetNOE: 0.0
+      res: C1_H11
+    1:
+      T1: 0.020237542371971156
+      T2: 0.017464732458659413
+      hetNOE: 0.0
+      res: C2_H21
+    2:
+      T1: 0.022789467056015242
+      T2: 0.01995117570636323
+      hetNOE: 0.0
+      res: C3_H31
+    3:
+      T1: 0.02091041775835944
+      T2: 0.01835041015764624
+      hetNOE: 0.0
+      res: C4_H41
+    4:
+      T1: 0.02186953417405953
+      T2: 0.01935348620732032
+      hetNOE: 0.0
+      res: C5_H51
+    5:
+      T1: 0.022110571403988758
+      T2: 0.01959762012822241
+      hetNOE: 0.0
+      res: C6_H61
+    6:
+      T1: 0.02472170886968647
+      T2: 0.022140491636138467
+      hetNOE: 0.0
+      res: C7_H71
+    7:
+      T1: 0.028211465296420817
+      T2: 0.025491340565551395
+      hetNOE: 0.0
+      res: C8_H81
+    8:
+      T1: 0.036443356275445864
+      T2: 0.0331554711392715
+      hetNOE: 0.0
+      res: C9_H91
+    9:
+      T1: 0.050629512342169405
+      T2: 0.04632782083544809
+      hetNOE: 0.0
+      res: C10_H101
+    10:
+      T1: 0.08457067672567294
+      T2: 0.07782241515094895
+      hetNOE: 0.0
+      res: C11_H111
+    11:
+      T1: 0.3460671457843417
+      T2: 0.33170115653484733
+      hetNOE: 0.0
+      res: C12_H121
+analysis1:
+  info:
+    00_nuclei: 2H
+    01_magnetic_field_[T]: 8.49
+    02_magnetic_field_[MHz]: 361.47
+    03_N_exp_to_fit: 500
+    04_smallest_corr_time_[s]: 1.0e-15
+    05_biggest_corr_time_[s]: 1.0e-06
+    06_analyze: 0.1
+    07_OP: 0
+    08_corr_func_length_[ps]: 1483000.0
+    09_saving_frequency_[ps]: 10.0
+    10_xtc: non-Water_hMff_micelle_40SDS_CHARMM_310K_Na_Neut_OPC_replica1.xtc
+    11_xtc_modified: '2023-02-27 09:51:54'
+    12_naame: hMff_micelle_40SDS_CHARMM_310K_Na_Neut_OPC_replica1
+  results:
+    0:
+      T1: 0.03810331563444489
+      T2: 0.022761626338227488
+      hetNOE: 0.0
+      res: C1_H11
+    1:
+      T1: 0.03681616523519509
+      T2: 0.023596218496050186
+      hetNOE: 0.0
+      res: C2_H21
+    2:
+      T1: 0.0385143681395097
+      T2: 0.026148064724904597
+      hetNOE: 0.0
+      res: C3_H31
+    3:
+      T1: 0.03526024200974442
+      T2: 0.02391830229665811
+      hetNOE: 0.0
+      res: C4_H41
+    4:
+      T1: 0.035221013991068584
+      T2: 0.024767903739314343
+      hetNOE: 0.0
+      res: C5_H51
+    5:
+      T1: 0.03548255416645462
+      T2: 0.025081206122547182
+      hetNOE: 0.0
+      res: C6_H61
+    6:
+      T1: 0.038216148627632125
+      T2: 0.02792801813339571
+      hetNOE: 0.0
+      res: C7_H71
+    7:
+      T1: 0.04247164421449478
+      T2: 0.03172914550362244
+      hetNOE: 0.0
+      res: C8_H81
+    8:
+      T1: 0.05320665347033332
+      T2: 0.040659379969703126
+      hetNOE: 0.0
+      res: C9_H91
+    9:
+      T1: 0.07225679048247319
+      T2: 0.056037894027359
+      hetNOE: 0.0
+      res: C10_H101
+    10:
+      T1: 0.11494798563255618
+      T2: 0.0917554085367957
+      hetNOE: 0.0
+      res: C11_H111
+    11:
+      T1: 0.37878313231255134
+      T2: 0.34943863179261264
+      hetNOE: 0.0
+      res: C12_H121

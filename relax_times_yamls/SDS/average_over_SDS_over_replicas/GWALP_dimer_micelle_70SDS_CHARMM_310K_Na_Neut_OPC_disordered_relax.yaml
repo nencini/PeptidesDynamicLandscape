@@ -1,0 +1,85 @@
+analysis0:
+  info:
+    00_nuclei: 2H
+    01_magnetic_field_[T]: 2.35
+    02_magnetic_field_[MHz]: 100.05
+    03_N_exp_to_fit: 100
+    04_smallest_corr_time_[s]: 1.0e-14
+    05_biggest_corr_time_[s]: 1.0e-08
+    06_analyze: 0.1
+    07_OP: 0
+    08_corr_func_length_[ps]: 1500000.0
+    09_saving_frequency_[ps]: 10.0
+    10_xtc:
+    - non-Water_GWALP_dimer_micelle_70SDS_CHARMM_310K_Na_Neut_OPC_replica1.xtc
+    - non-Water_GWALP_dimer_micelle_70SDS_CHARMM_310K_Na_Neut_OPC_replica5_disordered.xtc
+    - non-Water_GWALP_dimer_micelle_70SDS_CHARMM_310K_Na_Neut_OPC_replica6_disordered.xtc
+    11_xtc_modified:
+    - '2023-01-06 19:21:31'
+    - '2023-04-03 17:10:31'
+    - '2023-04-03 17:18:26'
+    12_naame:
+    - GWALP_dimer_micelle_70SDS_CHARMM_310K_Na_Neut_OPC_replica1
+    - GWALP_dimer_micelle_70SDS_CHARMM_310K_Na_Neut_OPC_replica5_disordered
+    - GWALP_dimer_micelle_70SDS_CHARMM_310K_Na_Neut_OPC_replica6_disordered
+  results:
+    0:
+      T1: 0.01796830792882119
+      T2: 0.014433793814835078
+      hetNOE: 0.0
+      res: C1_H11
+    1:
+      T1: 0.01932026022531039
+      T2: 0.015860837324770435
+      hetNOE: 0.0
+      res: C2_H21
+    2:
+      T1: 0.02226138870107501
+      T2: 0.01873858154667167
+      hetNOE: 0.0
+      res: C3_H31
+    3:
+      T1: 0.019918499118107353
+      T2: 0.016898628580308533
+      hetNOE: 0.0
+      res: C4_H41
+    4:
+      T1: 0.020720611991115707
+      T2: 0.01782951057398188
+      hetNOE: 0.0
+      res: C5_H51
+    5:
+      T1: 0.020309346968997617
+      T2: 0.017560103545737397
+      hetNOE: 0.0
+      res: C6_H61
+    6:
+      T1: 0.02207522223223407
+      T2: 0.019227571090962053
+      hetNOE: 0.0
+      res: C7_H71
+    7:
+      T1: 0.024493540473822982
+      T2: 0.021338719413032847
+      hetNOE: 0.0
+      res: C8_H81
+    8:
+      T1: 0.03063832539225111
+      T2: 0.026718899990761318
+      hetNOE: 0.0
+      res: C9_H91
+    9:
+      T1: 0.041087887393863945
+      T2: 0.03576671627310155
+      hetNOE: 0.0
+      res: C10_H101
+    10:
+      T1: 0.06638101620634436
+      T2: 0.058177675715373085
+      hetNOE: 0.0
+      res: C11_H111
+    11:
+      T1: 0.3285251474905301
+      T2: 0.30597606414496187
+      hetNOE: 0.0
+      res: C12_H121

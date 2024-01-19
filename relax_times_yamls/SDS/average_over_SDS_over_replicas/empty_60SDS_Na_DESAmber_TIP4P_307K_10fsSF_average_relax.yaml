@@ -1,0 +1,85 @@
+analysis0:
+  info:
+    00_nuclei: 2H
+    01_magnetic_field_[T]: 2.35
+    02_magnetic_field_[MHz]: 100.05
+    03_N_exp_to_fit: 300
+    04_smallest_corr_time_[s]: 1.0e-15
+    05_biggest_corr_time_[s]: 1.0e-06
+    06_analyze: 0.1
+    07_OP: 0
+    08_corr_func_length_[ps]: 25000.0
+    09_saving_frequency_[ps]: 0.01
+    10_xtc:
+    - empty_60SDS_Na_DESAmber_TIP4P_307K_10fsSF_replica1.xtc
+    - empty_60SDS_Na_DESAmber_TIP4P_307K_10fsSF_replica2.xtc
+    - empty_60SDS_Na_DESAmber_TIP4P_307K_10fsSF_replica3.xtc
+    11_xtc_modified:
+    - '2023-05-29 12:48:18'
+    - '2023-05-29 12:47:43'
+    - '2023-05-23 17:11:21'
+    12_naame:
+    - empty_60SDS_Na_DESAmber_TIP4P_307K_10fsSF_replica1
+    - empty_60SDS_Na_DESAmber_TIP4P_307K_10fsSF_replica2
+    - empty_60SDS_Na_DESAmber_TIP4P_307K_10fsSF_replica3
+  results:
+    0:
+      T1: 0.029693989048283072
+      T2: 0.02807871551640821
+      hetNOE: 0.0
+      res: C1_H1
+    1:
+      T1: 0.02007850801095557
+      T2: 0.00175964383493687
+      hetNOE: 0.0
+      res: C2_H24
+    2:
+      T1: 0.014575947407837603
+      T2: 0.004960272574509191
+      hetNOE: 0.0
+      res: C3_H22
+    3:
+      T1: 0.013064071596855253
+      T2: 0.002338659447184181
+      hetNOE: 0.0
+      res: C4_H20
+    4:
+      T1: 0.012121006005741413
+      T2: 0.0017190268247935646
+      hetNOE: 0.0
+      res: C5_H18
+    5:
+      T1: 0.014707199943061106
+      T2: 0.0005611039868085719
+      hetNOE: 0.0
+      res: C6_H16
+    6:
+      T1: 0.010775767266927158
+      T2: 0.009906701104530957
+      hetNOE: 0.0
+      res: C7_H14
+    7:
+      T1: 0.011221035283312494
+      T2: 0.009898068195333188
+      hetNOE: 0.0
+      res: C8_H12
+    8:
+      T1: 0.015948229146634768
+      T2: 0.0007754578556771275
+      hetNOE: 0.0
+      res: C9_H10
+    9:
+      T1: 0.018912087774756715
+      T2: 0.0008141609783576533
+      hetNOE: 0.0
+      res: C10_H8
+    10:
+      T1: 0.01857667649471103
+      T2: 0.01761769715862818
+      hetNOE: 0.0
+      res: C11_H6
+    11:
+      T1: 0.20154597803434723
+      T2: 0.007606429421396048
+      hetNOE: 0.0
+      res: C12_H4

@@ -1,0 +1,152 @@
+analysis0:
+  info:
+    00_nuclei: 2H
+    01_magnetic_field_[T]: 19.964291496497925
+    02_magnetic_field_[MHz]: 850.0
+    03_N_exp_to_fit: 200
+    04_smallest_corr_time_[s]: 1.0e-14
+    05_biggest_corr_time_[s]: 1.0e-08
+    06_analyze: 0.1
+    07_OP: 0
+    08_corr_func_length_[ps]: 1500000.0
+    09_saving_frequency_[ps]: 10.0
+    10_xtc: non-Water_GWALP_dimer_micelle_70SDS_CHARMM_310K_Na_Neut_OPC_replica2.xtc
+    11_xtc_modified: '2022-12-26 11:12:01'
+    12_naame: GWALP_dimer_micelle_70SDS_CHARMM_310K_Na_Neut_OPC_replica2
+  results:
+    0:
+      T1: 0.07614214218807237
+      T2: 0.032717176280810306
+      hetNOE: 0.0
+      res: C1_H11
+    1:
+      T1: 0.06798406207244613
+      T2: 0.033783168835618015
+      hetNOE: 0.0
+      res: C2_H21
+    2:
+      T1: 0.06701182511260642
+      T2: 0.037564196997282376
+      hetNOE: 0.0
+      res: C3_H31
+    3:
+      T1: 0.059665891577884586
+      T2: 0.033527567564604836
+      hetNOE: 0.0
+      res: C4_H41
+    4:
+      T1: 0.05738229228496047
+      T2: 0.033704671635776874
+      hetNOE: 0.0
+      res: C5_H51
+    5:
+      T1: 0.055941163048865976
+      T2: 0.03286353088671911
+      hetNOE: 0.0
+      res: C6_H61
+    6:
+      T1: 0.057910190516275745
+      T2: 0.03508780788209758
+      hetNOE: 0.0
+      res: C7_H71
+    7:
+      T1: 0.06187065654808684
+      T2: 0.03809278252757049
+      hetNOE: 0.0
+      res: C8_H81
+    8:
+      T1: 0.07266657788104362
+      T2: 0.045844186947852125
+      hetNOE: 0.0
+      res: C9_H91
+    9:
+      T1: 0.09312592508078756
+      T2: 0.05996502243789195
+      hetNOE: 0.0
+      res: C10_H101
+    10:
+      T1: 0.14273397072806063
+      T2: 0.0925425490376958
+      hetNOE: 0.0
+      res: C11_H111
+    11:
+      T1: 0.47796700626705285
+      T2: 0.40515006972384776
+      hetNOE: 0.0
+      res: C12_H121
+analysis1:
+  info:
+    00_nuclei: 2H
+    01_magnetic_field_[T]: 19.964291496497925
+    02_magnetic_field_[MHz]: 850.0
+    03_N_exp_to_fit: 100
+    04_smallest_corr_time_[s]: 1.0e-11
+    05_biggest_corr_time_[s]: 1.0e-07
+    06_analyze: 0.1
+    07_OP: 0
+    08_corr_func_length_[ps]: 1500000.0
+    09_saving_frequency_[ps]: 10.0
+    10_xtc: non-Water_GWALP_dimer_micelle_70SDS_CHARMM_310K_Na_Neut_OPC_replica2.xtc
+    11_xtc_modified: '2022-12-26 11:12:01'
+    12_naame: GWALP_dimer_micelle_70SDS_CHARMM_310K_Na_Neut_OPC_replica2
+  results:
+    0:
+      T1: 0.07272776504997948
+      T2: 0.031985960102356936
+      hetNOE: 0.0
+      res: C1_H11
+    1:
+      T1: 0.06549864929253751
+      T2: 0.03307538432538918
+      hetNOE: 0.0
+      res: C2_H21
+    2:
+      T1: 0.06460941740099853
+      T2: 0.036742793812899306
+      hetNOE: 0.0
+      res: C3_H31
+    3:
+      T1: 0.05786177938142243
+      T2: 0.03277685120239477
+      hetNOE: 0.0
+      res: C4_H41
+    4:
+      T1: 0.05633881065943185
+      T2: 0.03331466096528974
+      hetNOE: 0.0
+      res: C5_H51
+    5:
+      T1: 0.05494593801290557
+      T2: 0.032478548350920296
+      hetNOE: 0.0
+      res: C6_H61
+    6:
+      T1: 0.05680335627637595
+      T2: 0.03464353973861449
+      hetNOE: 0.0
+      res: C7_H71
+    7:
+      T1: 0.06066894385546028
+      T2: 0.03756052891720881
+      hetNOE: 0.0
+      res: C8_H81
+    8:
+      T1: 0.07053814339820239
+      T2: 0.0448723506544958
+      hetNOE: 0.0
+      res: C9_H91
+    9:
+      T1: 0.08878927498838404
+      T2: 0.05819190392814072
+      hetNOE: 0.0
+      res: C10_H101
+    10:
+      T1: 0.1232499778108326
+      T2: 0.08463034441371543
+      hetNOE: 0.0
+      res: C11_H111
+    11:
+      T1: 0.2643713052522662
+      T2: 0.25131445197471053
+      hetNOE: 0.0
+      res: C12_H121

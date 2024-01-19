@@ -1,0 +1,85 @@
+analysis0:
+  info:
+    00_nuclei: 2H
+    01_magnetic_field_[T]: 2.35
+    02_magnetic_field_[MHz]: 100.05
+    03_N_exp_to_fit: 300
+    04_smallest_corr_time_[s]: 1.0e-15
+    05_biggest_corr_time_[s]: 1.0e-06
+    06_analyze: 0.1
+    07_OP: 0
+    08_corr_func_length_[ps]: 25000.0
+    09_saving_frequency_[ps]: 0.01
+    10_xtc:
+    - empty_60SDS_micelle_CHARMM36_TIP3P_10fsSF_307K_replica1.xtc
+    - empty_60SDS_micelle_CHARMM36_TIP3P_10fsSF_307K_replica2.xtc
+    - empty_60SDS_micelle_CHARMM36_TIP3P_10fsSF_307K_replica3.xtc
+    11_xtc_modified:
+    - '2023-06-12 11:34:11'
+    - '2023-06-12 11:34:22'
+    - '2023-06-15 13:41:51'
+    12_naame:
+    - empty_60SDS_micelle_CHARMM36_TIP3P_10fsSF_307K_replica1
+    - empty_60SDS_micelle_CHARMM36_TIP3P_10fsSF_307K_replica2
+    - empty_60SDS_micelle_CHARMM36_TIP3P_10fsSF_307K_replica3
+  results:
+    0:
+      T1: 0.0434576140006016
+      T2: 0.009364882811512532
+      hetNOE: 0.0
+      res: C1_H11
+    1:
+      T1: 0.05695302490329403
+      T2: 0.004719003672380046
+      hetNOE: 0.0
+      res: C2_H21
+    2:
+      T1: 0.06997055787334858
+      T2: 0.005065554698511569
+      hetNOE: 0.0
+      res: C3_H31
+    3:
+      T1: 0.06261066229248695
+      T2: 0.015765109390318457
+      hetNOE: 0.0
+      res: C4_H41
+    4:
+      T1: 0.06591814067949975
+      T2: 0.06547878133382981
+      hetNOE: 0.0
+      res: C5_H51
+    5:
+      T1: 0.06574394359694995
+      T2: 0.06534424149268739
+      hetNOE: 0.0
+      res: C6_H61
+    6:
+      T1: 0.08046015430358287
+      T2: 0.007227268762150469
+      hetNOE: 0.0
+      res: C7_H71
+    7:
+      T1: 0.09032276668650613
+      T2: 0.013308747570723124
+      hetNOE: 0.0
+      res: C8_H81
+    8:
+      T1: 0.10380007712141524
+      T2: 0.10305020371299835
+      hetNOE: 0.0
+      res: C9_H91
+    9:
+      T1: 0.13845942555090848
+      T2: 0.09409250531819774
+      hetNOE: 0.0
+      res: C10_H101
+    10:
+      T1: 0.23218473936222112
+      T2: 0.033788625942511745
+      hetNOE: 0.0
+      res: C11_H111
+    11:
+      T1: 0.5824179835369966
+      T2: 0.5822525286301445
+      hetNOE: 0.0
+      res: C12_H121

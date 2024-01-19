@@ -1,0 +1,76 @@
+analysis0:
+  info:
+    00_nuclei: 2H
+    01_magnetic_field_[T]: 2.35
+    02_magnetic_field_[MHz]: 100.05
+    03_N_exp_to_fit: 500
+    04_smallest_corr_time_[s]: 1.0e-15
+    05_biggest_corr_time_[s]: 1.0e-06
+    06_analyze: 0.1
+    07_OP: 0
+    08_corr_func_length_[ps]: 261300.0
+    09_saving_frequency_[ps]: 10.0
+    10_xtc: SDS_empty_60SDS_micelle_CHARMM36_TIP3P_10psSF_307K_replica2.xtc
+    11_xtc_modified: '2023-08-11 09:46:35'
+    12_naame: empty_60SDS_micelle_CHARMM36_TIP3P_10psSF_307K_replica2
+  results:
+    0:
+      T1: 0.043095312471805196
+      T2: 0.037099852787243204
+      hetNOE: 0.0
+      res: C1_H11
+    1:
+      T1: 0.05110752273841441
+      T2: 0.05040953013737089
+      hetNOE: 0.0
+      res: C2_H21
+    2:
+      T1: 0.06384622473147844
+      T2: 0.055483883279305334
+      hetNOE: 0.0
+      res: C3_H31
+    3:
+      T1: 0.06033670050696084
+      T2: 0.052265072367807516
+      hetNOE: 0.0
+      res: C4_H41
+    4:
+      T1: 0.0674575976808751
+      T2: 0.05033725377133263
+      hetNOE: 0.0
+      res: C5_H51
+    5:
+      T1: 0.06733911619158227
+      T2: 0.06641041470391672
+      hetNOE: 0.0
+      res: C6_H61
+    6:
+      T1: 0.07446724690956948
+      T2: 0.07320873810684086
+      hetNOE: 0.0
+      res: C7_H71
+    7:
+      T1: 0.08446843971977563
+      T2: 0.08386305225025256
+      hetNOE: 0.0
+      res: C8_H81
+    8:
+      T1: 0.10315213567767662
+      T2: 0.10258352234861688
+      hetNOE: 0.0
+      res: C9_H91
+    9:
+      T1: 0.13752598760027948
+      T2: 0.12403962710011557
+      hetNOE: 0.0
+      res: C10_H101
+    10:
+      T1: 0.20329781731277474
+      T2: 0.2020724351265373
+      hetNOE: 0.0
+      res: C11_H111
+    11:
+      T1: 0.4885905213232664
+      T2: 0.4883727804707503
+      hetNOE: 0.0
+      res: C12_H121
