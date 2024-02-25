@@ -65,7 +65,7 @@ if us.perform_analysis == 1:
 if us.perform_analysis == 2:
     timescale_report=[]
     spin_report=[]
-    composition,temperature=nm0.get_basic_info(tprfile)
+    composition,temperature=nm0.get_basic_info(us.tprfile)
     print(f'\n 1) Calculating Correlation functions for \n    {us.title} \n')
     nm1.calculate_correlation_functions(us.xtcfile,us.tprfile,us.output_path_correlation,us.output_name,us.end,us.begin,us.atom1_atom2_bonds, us.split_groups,us.title)
     print(f'\n 2) Calculating Timescales for \n    {us.title} \n')  

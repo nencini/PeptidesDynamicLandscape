@@ -165,12 +165,11 @@ def get_basic_info(tprfile):
         
         try:
             os.system('echo System | gmx dump -s '+ tprfile + ' >& '+file1)
-
             with open(file1, 'rt') as tpr_info:
                 topology_line=False
                 for line in tpr_info:
                     if 'ref-t' in line:
-                        sim['TEMPERATURE']=float(line.split()[1])
+                        readme['TEMPERATURE']=float(line.split()[1])
                     if 'topology:' in line:
                         topology_line=True
                         new_entry=False
@@ -189,7 +188,7 @@ def get_basic_info(tprfile):
                     if 'bIntermolecularInteractions' in line:
                         topology_line=False
             os.system('rm '+file1)
-        except:
+        except Exception as e:
             print("Cannot read tpr and get temperature")
   
     
