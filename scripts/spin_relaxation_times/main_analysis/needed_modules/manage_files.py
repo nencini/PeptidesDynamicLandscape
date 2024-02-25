@@ -111,7 +111,7 @@ def go_through_simulation(folder_path):
                     
                     if 'bIntermolecularInteractions' in line:
                         topology_line=False
-            #os.system('rm '+file1)
+            os.system('rm '+file1)
         except:
             print("Cannot read tpr and get temperature")
   
@@ -141,16 +141,64 @@ def go_through_simulation(folder_path):
     
     
     
-
+    
 
     with open(readme_file, 'w') as f:
         yaml.dump(sim,f, sort_keys=False)
+    
+    return sim["COMPOSITION"], sim['TEMPERATURE']
         
         
+def get_basic_info(tprfile):
+        
+    readme={}
+    
+    
+    
+    
+    if not 'TEMPERATUREf' in readme:
+        #get temperature from tpr; taken from AddData.py by Anne Kiirikki     
+        file1 =  'temporary_tpr.txt'
 
+        print("   * Exporting information with gmx dump \n")  
+        
+        
+        try:
+            os.system('echo System | gmx dump -s '+ tprfile + ' >& '+file1)
+
+            with open(file1, 'rt') as tpr_info:
+                topology_line=False
+                for line in tpr_info:
+                    if 'ref-t' in line:
+                        sim['TEMPERATURE']=float(line.split()[1])
+                    if 'topology:' in line:
+                        topology_line=True
+                        new_entry=False
+                        
+                        readme["COMPOSITION"]={}
+                    if topology_line:
+                        if 'moltype' in line:
+                            molecule_name=re.sub('"','',line.split()[3])
+                        if '#molecules' in line:
+                            if molecule_name in readme["COMPOSITION"]:
+                                readme["COMPOSITION"][molecule_name]+=int(line.split()[2])
+                            else:
+                                readme["COMPOSITION"][molecule_name]=int(line.split()[2])
+                                
+                    
+                    if 'bIntermolecularInteractions' in line:
+                        topology_line=False
+            os.system('rm '+file1)
+        except:
+            print("Cannot read tpr and get temperature")
+  
+    
+    return readme["COMPOSITION"], readme['TEMPERATURE']
     
 
 
+    with open(readme_file, 'w') as f:
+        yaml.dump(readme,f, sort_keys=False)
 
 def check_for_latest_files(folder_path,readme):
     files_to_consider=["xtc","edr","tpr","top","mdp","ndx","gro","cpt","log"]
@@ -280,7 +328,9 @@ def remove_water(folder_path,save_part,xtc):
     else:
         if not xtc:
 
-
+            if content["FILES"]["ndx"]["NAME"]=='none':
+                os.system(f'echo "q \n \n" | gmx make_ndx -f {folder_path}/{content["FILES"]["tpr"]["NAME"]} -o {folder_path}/index.ndx')
+                content["FILES"]["ndx"]["NAME"]='index.ndx'
             conversions={"xtc":"echo 'converting tpr and gro files'",
                          "tpr":"echo "+save_part+"|gmx convert-tpr -s " + folder_path+"/"+content["FILES"]["tpr"]["NAME"] + " -o " 
                                 + folder_path+"/"+save_part+"_"+content["FILES"]["tpr"]["NAME"]+" -extend 10 -n "

@@ -192,7 +192,7 @@ def get_timescales_for_system(folder_path,OP,smallest_corr_time, biggest_corr_ti
         if save_yaml:
             output_name=f'{output_path}/{output_prefix}_timescales.yaml'
             yaml_timescales = save_timescales_yaml(output_name,timescales, eff_times, eff_times_area, residues,info,content)
-            return timescales, eff_times, eff_times_area, residues, org_data, output_prefix, artificials
+            return timescales, eff_times, eff_times_area, residues, org_data, output_prefix, artificials, info
     print('   * Timescales from correlation fuction already calculated')
     return []
     

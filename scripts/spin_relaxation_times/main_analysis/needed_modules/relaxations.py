@@ -254,41 +254,10 @@ def exp_sum(xvalues,timescales):
         results.append(corr)
     return results    
     
-def print_report(timescale_report,report_name):               
-    with PdfPages(report_name) as pdf:    
-        rows=3
-        cols=2
-        per_page=rows*cols
-
-        plt.rcParams["figure.figsize"] = [8.25, 11.75]
-        plt.rcParams["figure.autolayout"] = True
-        fig, axs = plt.subplots(rows, cols)
-        i=0
-        for i,system in enumerate(timescale_report):
-            xvalues=np.array(system[4][0])
-            fits=exp_sum(xvalues,system[0])
-
-            for j in range(1,len(system[4])):
-                axs[(i//cols)%per_page,(i%cols)].plot(xvalues/1000,system[4][j],"-",c=f"C{j-1}")
-                
-                axs[(i//cols)%per_page,(i%cols)].plot(xvalues/1000,fits[j-1],"--",c=f"C{j-1}")
-            axs[(i//cols)%per_page,(i%cols)].set_xlabel('Time [ns]')
-            axs[(i//cols)%per_page,(i%cols)].set_ylabel('Correlation function')
-            axs[(i//cols)%per_page,(i%cols)].set_title(system[5],size=8)
-            if (i%per_page==0 and i!=0):
-                pdf.savefig()  # saves the current figure into a pdf page
-                plt.rcParams["figure.figsize"] = [8.25, 11.75]
-                plt.rcParams["figure.autolayout"] = True
-                fig, axs = plt.subplots(rows, cols)
-    
-        for j in range(i+1,((i//per_page)+1)*per_page):
-            axs[(j//cols)%per_page,(j%cols)].axis('off')
-    
-        pdf.savefig()          
-        plt.close()                 
         
         
-def print_report2(timescale_report,report_name):               
+def print_report3(timescale_report,spin_report,composition,temperature,magnetic_field,nuclei,report_name):               
+    magnetic_field_MHz=float(np.round(magnetic_field /(2*np.pi/gammaH*10**6),2))
     with PdfPages(report_name) as pdf:    
         rows=3
         cols=2
@@ -300,28 +269,63 @@ def print_report2(timescale_report,report_name):
         fig, axs = plt.subplots(rows, cols)
         i=0
         for i,system in enumerate(timescale_report):
+            plt.rcParams["figure.figsize"] = [8.25, 11.75]
+            plt.rcParams["figure.autolayout"] = True
+            fig, axs = plt.subplots(rows, cols)
             xvalues=np.array(system[4][0])
             fits=exp_sum(xvalues,system[0])
 
             for j in range(1,len(system[4])):
-                axs[i%rows,0].plot(xvalues/1000,system[4][j],"-",c=f"C{j-1}")
+                axs[0,0].plot(xvalues/1000,system[4][j],"-",c=f"C{j-1}")
                 
-                axs[(i)%rows,0].plot(xvalues/1000,fits[j-1],"--",c=f"C{j-1}")
-                axs[(i)%rows,1].axis('off')
+                axs[0,0].plot(xvalues/1000,fits[j-1],"--",c=f"C{j-1}")
+            axs[0,1].axis('off')
                 
-                axs[(i)%rows,1].text(0,0,'\n'.join(system[6]),fontsize=6, fontdict=None)
-            axs[(i)%rows,0].set_xlabel('Time [ns]')
-            axs[(i)%rows,0].set_ylabel('Correlation function')
-            axs[(i)%rows,0].set_title(system[5],size=8)
-            if (i%rows==0 and i!=0):
-                pdf.savefig()  # saves the current figure into a pdf page
-                plt.rcParams["figure.figsize"] = [8.25, 11.75]
-                plt.rcParams["figure.autolayout"] = True
-                fig, axs = plt.subplots(rows, cols)
-    
-        for j in range(i+1,((i//rows)+1)*rows):
-            axs[(j)%rows,0].axis('off')
-            axs[(j)%rows,1].axis('off')
-    
-        pdf.savefig()          
+            axs[0,1].text(0,0,'\n'.join(system[6]),fontsize=6, fontdict=None)
+            axs[0,0].set_xlabel('Time [ns]')
+            axs[0,0].set_ylabel('Correlation function')
+            axs[0,0].set_title(system[5],size=8)
+            
+            res=spin_report[i][3].keys()
+            labels=[]
+            for key,data in spin_report[i][3].items():
+                labels.append(data[0])
+            
+            axs[1,0].set_xticks(list(res), labels, rotation='vertical',fontsize=4)
+            axs[1,0].plot(res,spin_report[i][0])
+            axs[1,0].set_xlabel('Residue')
+            axs[1,0].set_ylabel('T1 [s]')
+            
+            axs[1,1].set_xticks(list(res), labels, rotation='vertical',fontsize=4)
+            axs[1,1].plot(res,spin_report[i][1])
+            axs[1,1].set_xlabel('Residue')
+            axs[1,1].set_ylabel('T2 [s]')
+            
+            axs[2,0].set_xticks(list(res), labels, rotation='vertical',fontsize=4)
+            axs[2,0].plot(res,spin_report[i][2])
+            axs[2,0].set_xlabel('Residue')
+            axs[2,0].set_ylabel('hetNOE')
+            
+            axs[2,1].axis('off')
+            text=""
+            for key,data in system[7].items():
+                text+=f'{str(" ".join(key.split("_")[1:])):<30s}'
+                
+                data=str(data).strip()
+                for l in range(len(str(data))//40+1):
+                    if l==0:
+                        text+=f"{data[l*40:(l+1)*40].strip():40s}\n"
+                        
+                    else:
+                        text+=f"{' '*30}{data[l*40:(l+1)*40].strip()}\n"
+            text+=f'{"Temperature [K]":<30s}{temperature}\n'
+            text+=f'{"Magnetic field [T]":<30s}{magnetic_field:.2f}\n'
+            text+=f'{"Magnetic field [MHz]":<30s}{magnetic_field_MHz}\n'
+            text+=f'{"Nuclei":<30s}{nuclei}\n'
+            text+=f'Composition: \n'
+            for co,nu in composition.items():
+                text+=f'    {co:<15s}{nu}\n'
+            axs[2,1].text(0,0,text,fontsize=6,  family='monospace')
+            pdf.savefig()  # saves the current figure into a pdf page
+                  
         plt.close()                 

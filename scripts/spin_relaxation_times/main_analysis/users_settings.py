@@ -9,7 +9,7 @@ perform_analysis = 1   # 1/2/3   #1 - goes through fodlers in parent folder, tak
 if perform_analysis == 1:
     """Path settings, saving settings"""
     parent_folder_path="//home/ricky/Documents/from_work/git/CorysPeptides/try/" # A parent folder that contains subfolders with simulations    
-    systems=["eElab",'GWALP']                            # select only systems which folder name contains some of these
+    systems=[""]                            # select only systems which folder name contains some of these
     output_path_correlation="/home/ricky/Documents/from_work/git/CorysPeptides/correlation_functions/"   
     output_path_timescales="/home/ricky/Documents/from_work/git/CorysPeptides/timescales_yamls2/" 
     output_path_relaxations="/home/ricky/Documents/from_work/git/CorysPeptides/relaxations/" 

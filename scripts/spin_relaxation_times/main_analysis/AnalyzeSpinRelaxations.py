@@ -29,19 +29,20 @@ if us.magnetic_field_units=='MHz':
 
 if us.perform_analysis == 1:
     timescale_report=[]
-    for file in os.listdir(us.parent_folder_path):
-        folder_path = us.parent_folder_path+os.fsdecode(file)+"/"
+    spin_report=[]
+    for filen in os.listdir(us.parent_folder_path):
+        folder_path = us.parent_folder_path+os.fsdecode(filen)+"/"
         for system in us.systems:
-            if fnmatch.fnmatch(os.fsdecode(file), "*"+system+"*"):
+            if fnmatch.fnmatch(os.fsdecode(filen), "*"+system+"*"):
                 print(f' \n \n ########################### \n')
                 print(f' 1) Creating and updating README.yaml for \n    {folder_path} \n')
-                nm0.go_through_simulation(folder_path)
+                composition,temperature=nm0.go_through_simulation(folder_path)
                 nm0.remove_water(folder_path,us.selection,us.compress_xtc)
                 with open(f'{folder_path}/README.yaml') as yaml_file:
                     readme = yaml.load(yaml_file, Loader=yaml.FullLoader)
                 xtcfile=f"{folder_path}/{readme['FILES_FOR_RELAXATION']['xtc']['NAME']}"
                 tprfile=f"{folder_path}/{readme['FILES_FOR_RELAXATION']['tpr']['NAME']}"
-                title=readme['FILES']['tpr']['NAME'][:-4]
+                title=filen
                 output_name=title  
 
                 print(f'\n 2) Calculating Correlation functions for \n    {folder_path} \n')
@@ -57,11 +58,14 @@ if us.perform_analysis == 1:
                 timescales_file=f'{us.output_path_timescales}/{output_name}_timescales.yaml'
                  
                 T1s, T2s, NOEs,  residues = nm3.get_spin_relaxation_times(us.magnetic_field,us.OP,us.smallest_corr_time, us.biggest_corr_time, us.N_exp_to_fit,us.analyze,timescales_file,us.nuclei,us.output_path_relaxations,output_name,save_yaml=True,save_txt=us.save_relaxations_txt)
-    nm3.print_report2(timescale_report,us.report_name)
+                spin_report.append((T1s,T2s,NOEs,residues))
+    nm3.print_report3(timescale_report,spin_report,composition,temperature,us.magnetic_field,us.nuclei,us.report_name)
 
                 
 if us.perform_analysis == 2:
     timescale_report=[]
+    spin_report=[]
+    composition,temperature=nm0.get_basic_info(tprfile)
     print(f'\n 1) Calculating Correlation functions for \n    {us.title} \n')
     nm1.calculate_correlation_functions(us.xtcfile,us.tprfile,us.output_path_correlation,us.output_name,us.end,us.begin,us.atom1_atom2_bonds, us.split_groups,us.title)
     print(f'\n 2) Calculating Timescales for \n    {us.title} \n')  
@@ -72,5 +76,6 @@ if us.perform_analysis == 2:
     print(f'\n 4) Calculating Spin relaxation times for \n    {us.title} \n')
     timescales_file=f'{us.output_path_timescales}/{us.output_name}_timescales.yaml'
     T1s, T2s, NOEs,  residues = nm3.get_spin_relaxation_times(us.magnetic_field,us.OP,us.smallest_corr_time, us.biggest_corr_time, us.N_exp_to_fit,us.analyze,timescales_file,us.nuclei,us.output_path_relaxations,us.output_name,save_yaml=True,save_txt=us.save_relaxations_txt)
-    nm3.print_report2(timescale_report,us.report_name)
+    spin_report.append((T1s,T2s,NOEs,residues))
+    nm3.print_report3(timescale_report,spin_report,composition,temperature,us.magnetic_field,us.nuclei,us.report_name)
 
