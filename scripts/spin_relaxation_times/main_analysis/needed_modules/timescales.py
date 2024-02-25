@@ -127,7 +127,7 @@ def get_timescales_for_system(folder_path,OP,smallest_corr_time, biggest_corr_ti
                 help1=True
         if not help1:
             new_ana=True
-    if save_txt and not save_yaml:
+    if save_txt:
         new_ana=True
     if new_ana:
         if 'Correlation_files_INFO.yaml' in os.listdir(folder_path) or 'README_correl.yaml' in os.listdir(folder_path):
