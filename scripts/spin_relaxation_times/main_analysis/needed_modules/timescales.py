@@ -187,7 +187,7 @@ def get_timescales_for_system(folder_path,OP,smallest_corr_time, biggest_corr_ti
         info["08_corr_func_length_[ps]"]=float(len(org_data[0])*(org_data[0][1]-org_data[0][0]))/analyze
         info["09_saving_frequency_[ps]"]=float((org_data[0][1]-org_data[0][0]))
         if save_txt:
-            output_name=f'{output_path}/{output_prefix}.yaml'
+            output_name=f'{output_path}/{output_prefix}'
             save_timescales_txt(output_name,timescales, eff_times, eff_times_area, residues,info,content)
         if save_yaml:
             output_name=f'{output_path}/{output_prefix}_timescales.yaml'

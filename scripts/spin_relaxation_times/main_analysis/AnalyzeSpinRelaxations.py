@@ -30,6 +30,8 @@ if us.magnetic_field_units=='MHz':
 if us.perform_analysis == 1:
     timescale_report=[]
     spin_report=[]
+    compositions=[]
+    temperatures=[]
     for filen in os.listdir(us.parent_folder_path):
         folder_path = us.parent_folder_path+os.fsdecode(filen)+"/"
         for system in us.systems:
@@ -37,6 +39,8 @@ if us.perform_analysis == 1:
                 print(f' \n \n ########################### \n')
                 print(f' 1) Creating and updating README.yaml for \n    {folder_path} \n')
                 composition,temperature=nm0.go_through_simulation(folder_path)
+                compositions.append(composition)
+                temperatures.append(temperature)
                 nm0.remove_water(folder_path,us.selection,us.compress_xtc)
                 with open(f'{folder_path}/README.yaml') as yaml_file:
                     readme = yaml.load(yaml_file, Loader=yaml.FullLoader)
@@ -59,7 +63,7 @@ if us.perform_analysis == 1:
                  
                 T1s, T2s, NOEs,  residues = nm3.get_spin_relaxation_times(us.magnetic_field,us.OP,us.smallest_corr_time, us.biggest_corr_time, us.N_exp_to_fit,us.analyze,timescales_file,us.nuclei,us.output_path_relaxations,output_name,save_yaml=True,save_txt=us.save_relaxations_txt)
                 spin_report.append((T1s,T2s,NOEs,residues))
-    nm3.print_report3(timescale_report,spin_report,composition,temperature,us.magnetic_field,us.nuclei,us.report_name)
+    nm3.print_report3(timescale_report,spin_report,compositions,temperatures,us.magnetic_field,us.nuclei,us.report_name)
 
                 
 if us.perform_analysis == 2:
@@ -77,5 +81,5 @@ if us.perform_analysis == 2:
     timescales_file=f'{us.output_path_timescales}/{us.output_name}_timescales.yaml'
     T1s, T2s, NOEs,  residues = nm3.get_spin_relaxation_times(us.magnetic_field,us.OP,us.smallest_corr_time, us.biggest_corr_time, us.N_exp_to_fit,us.analyze,timescales_file,us.nuclei,us.output_path_relaxations,us.output_name,save_yaml=True,save_txt=us.save_relaxations_txt)
     spin_report.append((T1s,T2s,NOEs,residues))
-    nm3.print_report3(timescale_report,spin_report,composition,temperature,us.magnetic_field,us.nuclei,us.report_name)
+    nm3.print_report3(timescale_report,spin_report,[composition],[temperature],us.magnetic_field,us.nuclei,us.report_name)
 

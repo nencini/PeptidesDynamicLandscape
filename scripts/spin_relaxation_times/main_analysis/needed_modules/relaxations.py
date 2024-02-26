@@ -256,10 +256,10 @@ def exp_sum(xvalues,timescales):
     
         
         
-def print_report3(timescale_report,spin_report,composition,temperature,magnetic_field,nuclei,report_name):               
+def print_report3(timescale_report,spin_report,compositions,temperatures,magnetic_field,nuclei,report_name):               
     magnetic_field_MHz=float(np.round(magnetic_field /(2*np.pi/gammaH*10**6),2))
     with PdfPages(report_name) as pdf:    
-        rows=3
+        rows=4
         cols=2
         per_page=rows*cols
 
@@ -279,12 +279,22 @@ def print_report3(timescale_report,spin_report,composition,temperature,magnetic_
                 axs[0,0].plot(xvalues/1000,system[4][j],"-",c=f"C{j-1}")
                 
                 axs[0,0].plot(xvalues/1000,fits[j-1],"--",c=f"C{j-1}")
-            axs[0,1].axis('off')
-                
-            axs[0,1].text(0,0,'\n'.join(system[6]),fontsize=6, fontdict=None)
+            
+            
             axs[0,0].set_xlabel('Time [ns]')
             axs[0,0].set_ylabel('Correlation function')
-            axs[0,0].set_title(system[5],size=8)
+            
+            for residue in range(1,len(system[0])):
+                for j,weight in enumerate(system[0][residue]):
+                    ms=int(np.round(weight*20,0))
+                    axs[0,1].set_yscale('log')
+                    axs[0,1].plot(residue-1,system[0][0][j]*10**9, "o", markersize=ms, markeredgecolor='C0', markerfacecolor='C0')
+            
+            
+            axs[0,1].set_xlabel('Residue ID')
+            axs[0,1].set_ylabel('Timescale [ns]')
+            
+            plt.suptitle(system[5],size=15)
             
             res=spin_report[i][3].keys()
             labels=[]
@@ -307,6 +317,11 @@ def print_report3(timescale_report,spin_report,composition,temperature,magnetic_
             axs[2,0].set_ylabel('hetNOE')
             
             axs[2,1].axis('off')
+            
+            axs[3,0].axis('off')    
+            axs[3,0].text(0,0,'\n'.join(system[6]),fontsize=6, fontdict=None)
+            
+            axs[3,1].axis('off')
             text=""
             for key,data in system[7].items():
                 text+=f'{str(" ".join(key.split("_")[1:])):<30s}'
@@ -318,14 +333,16 @@ def print_report3(timescale_report,spin_report,composition,temperature,magnetic_
                         
                     else:
                         text+=f"{' '*30}{data[l*40:(l+1)*40].strip()}\n"
-            text+=f'{"Temperature [K]":<30s}{temperature}\n'
+            text+=f'{"Temperature [K]":<30s}{temperatures[i]}\n'
             text+=f'{"Magnetic field [T]":<30s}{magnetic_field:.2f}\n'
             text+=f'{"Magnetic field [MHz]":<30s}{magnetic_field_MHz}\n'
             text+=f'{"Nuclei":<30s}{nuclei}\n'
             text+=f'Composition: \n'
-            for co,nu in composition.items():
+            for co,nu in compositions[i].items():
                 text+=f'    {co:<15s}{nu}\n'
-            axs[2,1].text(0,0,text,fontsize=6,  family='monospace')
+            axs[3,1].text(0,0,text,fontsize=6,  family='monospace')
+            
+            
             pdf.savefig()  # saves the current figure into a pdf page
                   
         plt.close()                 

@@ -14,8 +14,8 @@ if perform_analysis == 1:
     output_path_timescales="/home/ricky/Documents/from_work/git/CorysPeptides/timescales_yamls2/" 
     output_path_relaxations="/home/ricky/Documents/from_work/git/CorysPeptides/relaxations/" 
     
-    save_timescales_txt=False # Generate also txt files?, Results are already saved to yaml files             
-    save_relaxations_txt=False # Generate also txt files?, Results are already saved to yaml files 
+    save_timescales_txt=True # Generate also txt files?, Results are already saved to yaml files             
+    save_relaxations_txt=True # Generate also txt files?, Results are already saved to yaml files 
     
     report_name='analysis_report.pdf'
                 
