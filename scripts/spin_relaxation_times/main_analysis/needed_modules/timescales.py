@@ -53,7 +53,7 @@ def get_timescales(correlation_file,OP,smallest_corr_time, biggest_corr_time, N_
     # Create correlation times from the times and number of exponential specified by the user
     step_exp=(biggest_corr_time-smallest_corr_time)/N_exp_to_fit
     Ctimes = 10 ** np.arange(smallest_corr_time, biggest_corr_time, step_exp)  # units: ps
-
+    Ctimes = np.logspace(smallest_corr_time-12, biggest_corr_time-12, N_exp_to_fit)*10**9
     # First, no forcing the plateou
     # create exponential functions and put them into a matrix, individual exponentials in columns
     #the lengthe of correlationd data to be used is specified by the user
@@ -151,6 +151,7 @@ def get_timescales_for_system(folder_path,OP,smallest_corr_time, biggest_corr_ti
                 for i in x:
                     AA_index+=i
                 AA_index=int(AA_index)
+                AA_index=int(file.split("_")[-1].split(".")[0])
                 input_corr_file = folder_path+os.fsdecode(file)
                 Ctimes, Coeffs, Teff, tau_eff_area, org_corrF, times_out=get_timescales(input_corr_file,OP,smallest_corr_time, biggest_corr_time, N_exp_to_fit,analyze)
                 tims=[]
@@ -168,12 +169,17 @@ def get_timescales_for_system(folder_path,OP,smallest_corr_time, biggest_corr_ti
             tims.append(float(c))
         timescales[0]=tims
     
-        if cr:
+        try:
             with open(folder_path+'Correlation_files_INFO.yaml') as yaml_file:
                 corr_readme = yaml.load(yaml_file, Loader=yaml.FullLoader)
             residues=corr_readme['RELAXATIONS']
-        else:
-            residues={}
+        except:
+            try: 
+                with open(folder_path+'README_correl.yaml') as yaml_file:
+                    corr_readme = yaml.load(yaml_file, Loader=yaml.FullLoader)
+                residues=corr_readme['RELAXATIONS']
+            except:
+                residues={}
         
         artificials=[]
         for i in range(1,len(timescales)):
